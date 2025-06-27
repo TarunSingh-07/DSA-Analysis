@@ -31,9 +31,8 @@ int main()
     int n = 15;
     printArray(third, n);
 
-    int thirdSize = sizeof(third)/sizeof(int);
+    int thirdSize = sizeof(third) / sizeof(int);
     cout << "Size of third array: " << thirdSize << endl;
-
 
     // Initialising all location with 0
     int fourth[10] = {0};
@@ -46,11 +45,21 @@ int main()
     n = 20;
     printArray(fifth, n);
 
-    int fifthSize = sizeof(fifth)/sizeof(int);
+    int fifthSize = sizeof(fifth) / sizeof(int);
     cout << "Size of fifth array: " << fifthSize << endl;
 
+    char ch[5] = {'a', 'b', 'c', 'd', 'e'};
+    cout << ch[3] << endl;
 
-    cout << "everything is fine " << endl;
+    cout << "Printing the array : ";
+    for (int i = 0; i < 5; i++)
+    {
+        cout << ch[i] << " ";
+    }
+    cout << "Printing DONE!" << endl;
+
+    cout << endl
+         << "everything is fine " << endl;
 
     return 0;
 }
