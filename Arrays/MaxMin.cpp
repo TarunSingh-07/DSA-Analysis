@@ -2,29 +2,37 @@
 #include <climits>
 using namespace std;
 
-int getMax(int num[], int n){
-    int max = INT_MIN;
+int getMax(int num[], int n)
+{
+    int maxi = INT_MIN;
     for (int i = 0; i < n; i++)
     {
-        if(num[i] > max){
-            max = num[i];
-        }
+        maxi = max(maxi, num[i]);
+
+        // Alternative way to find maximum value
+        // if (num[i] > max)
+        // {
+        //     max = num[i];
+        // }
     }
     // return max value
-    return max;
-    
+    return maxi;
 }
-int getMin(int num[], int n){
-    int min = INT_MAX;
+int getMin(int num[], int n)
+{
+    int mini = INT_MAX;
     for (int i = 0; i < n; i++)
     {
-        if(num[i] < min){
-            min = num[i];
-        }
+
+        mini = min(mini, num[i]);
+
+        // Alternative way to find minimum value
+        // if(num[i] < min){
+        //     min = num[i];
+        // }
     }
     // return min value
-    return min;
-    
+    return mini;
 }
 
 int main()
@@ -40,8 +48,8 @@ int main()
 
         cin >> num[i];
     }
-    cout << "Maximum value is: " << getMax(num, size) <<endl;
-    cout << "Minimum value is: " << getMin(num, size) <<endl;
+    cout << "Maximum value is: " << getMax(num, size) << endl;
+    cout << "Minimum value is: " << getMin(num, size) << endl;
 
     return 0;
 }
